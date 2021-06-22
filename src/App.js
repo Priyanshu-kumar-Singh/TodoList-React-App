@@ -35,7 +35,7 @@ function App() {
     localStorage.getItem("todos", JSON.stringify(todos));
   }
 
-  const addTodo = (title, desc) => {
+  const addTodo = (title, desc,li) => {
     // console.log("I am adding this todo ", title, desc);
     let sno = 1;
     if (todos.length > 0) sno = todos[todos.length - 1].sno + 1;
@@ -44,6 +44,7 @@ function App() {
       sno: sno,
       title: title,
       desc: desc,
+      li: li
     }
     setTodos([...todos, myTodo]);
     // console.log(myTodo);
